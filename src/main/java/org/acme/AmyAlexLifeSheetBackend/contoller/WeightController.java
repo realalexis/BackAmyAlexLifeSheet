@@ -31,6 +31,7 @@ public class WeightController {
     }
 
     //Build Get All weight REST API
+    @CrossOrigin(origins = "http://localhost:5173/")
     @GetMapping
     public ResponseEntity<List<WeightDto>> getWeightAll(){
         List<WeightDto> weight = weightService.getWeightAll();

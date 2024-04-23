@@ -9,5 +9,4 @@ public class AmyAlexLifeSheetBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AmyAlexLifeSheetBackendApplication.class, args);
 	}
-
 }

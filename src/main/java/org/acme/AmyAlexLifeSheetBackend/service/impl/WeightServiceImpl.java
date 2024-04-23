@@ -43,21 +43,6 @@ public class WeightServiceImpl implements WeightService {
         return null;
     }
 
-//    @Override
-//    public WeightDto updateWeight(long weightId, WeightDto updateWeight) {
-//        Weight weight = weightRepository.findById(weightId).orElseThrow(
-//                () -> new ResourceNotFound("Weight does not exists with given id: " + weightId)
-//        );
-//        weight.setDay(updateWeight.getDay());
-//        weight.setMonth(updateWeight.getMonth());
-//        weight.setYear(updateWeight.getYear());
-//        weight.setWeight(updateWeight.getWeight());
-//
-//         Weight updateWeightObj = weightRepository.save(weight);
-//
-//
-//        return WeightMapper.mapToWeightDto(updateWeightObj);
-//    }
 
     @Override
     public void deleteWeight(Long weightId) {
