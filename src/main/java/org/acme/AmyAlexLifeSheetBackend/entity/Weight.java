@@ -11,19 +11,22 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Hungry")
-public class Hungry {
+@Table(name = "Weight")
+public class Weight {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "day")
-    private String day;
+    private int day;
 
     @Column(name = "month")
-    private String month;
+    private int month;
 
-    @Column(name = "key")
-    private String key;
+    @Column(name = "year")
+    private int year;
+
+    @Column(name = "weight")
+    private int weight;
 }
