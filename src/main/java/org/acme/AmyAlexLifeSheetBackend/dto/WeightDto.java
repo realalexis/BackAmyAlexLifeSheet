@@ -9,9 +9,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HungryDto {
+public class WeightDto {
     private Long id;
-    private String day;
-    private String month;
-    private String key;
+    private int day;
+    private int month;
+    private int year;
+    private int weight;
 }
