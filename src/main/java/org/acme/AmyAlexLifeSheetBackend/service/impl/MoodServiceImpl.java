@@ -43,6 +43,14 @@ public class MoodServiceImpl implements MoodService {
         return null;
     }
 
+    @Override
+    public List<MoodDto> getMoodByMonth(int moodMonth) {
+        List<Mood> month = moodRepository.findByMonth(moodMonth);
+        return month.stream().map(MoodMapper::mapToMoodDto)
+                .collect(Collectors.toList());
+    }
+
+
 
 //    @Override
 //    public MoodDto updateMood(long moodId, MoodDto updateMood) {
