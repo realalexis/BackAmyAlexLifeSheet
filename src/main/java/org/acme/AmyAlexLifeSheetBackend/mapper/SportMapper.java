@@ -14,8 +14,8 @@ public class SportMapper {
                 sport.getDay(),
                 sport.getMonth(),
                 sport.getQuarter(),
-                sport.getYearweek(),
-                sport.getYearmonth(),
+                sport.getYear_week(),
+                sport.getYear_month(),
                 sport.getYear(),
                 sport.getCommand(),
                 sport.getReason()
@@ -32,8 +32,8 @@ public class SportMapper {
                 sportDto.getDay(),
                 sportDto.getMonth(),
                 sportDto.getQuarter(),
-                sportDto.getYearweek(),
-                sportDto.getYearmonth(),
+                sportDto.getYear_week(),
+                sportDto.getYear_month(),
                 sportDto.getYear(),
                 sportDto.getCommand(),
                 sportDto.getReason()

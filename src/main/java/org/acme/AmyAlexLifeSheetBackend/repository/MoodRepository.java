@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface MoodRepository extends JpaRepository<Mood, Long> {
-    List<Mood> findByMonth(int month);
+    List<Mood> findByYear(int year);
 }

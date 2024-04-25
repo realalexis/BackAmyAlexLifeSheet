@@ -9,11 +9,7 @@ public interface MoodService  {
     MoodDto createMood(MoodDto moodDto);
     MoodDto getMoodById(Long moodId);
     List<MoodDto>  getMoodAll();
-
     MoodDto updateMood(long moodId, MoodDto updateMood);
-
-    List<MoodDto> getMoodByMonth(int moodMonth);
-
-
+    List<MoodDto> getMoodByYear(int moodYear);
     void deleteMood(Long moodId);
 }

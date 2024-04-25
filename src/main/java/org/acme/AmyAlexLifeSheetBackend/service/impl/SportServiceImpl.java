@@ -43,6 +43,13 @@ public class SportServiceImpl implements SportService {
         return null;
     }
 
+    @Override
+    public List<SportDto> getSportByYear(int sportYear) {
+        List<Sport> year = SportRepository.findByYear(sportYear);
+        return year.stream().map(SportMapper::mapToSportDto)
+                .collect(Collectors.toList());
+    }
+
 
     @Override
     public void deleteSport(Long sportId) {

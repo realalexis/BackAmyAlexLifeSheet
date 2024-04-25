@@ -28,7 +28,6 @@ public class MoodServiceImpl implements MoodService {
         Mood mood = moodRepository.findById(moodId)
                 .orElseThrow(() -> new ResourceNotFound("Mood does not exist with given id : " + moodId));
         return MoodMapper.mapToMoodDto(mood);
-
     }
 
     @Override
@@ -44,36 +43,11 @@ public class MoodServiceImpl implements MoodService {
     }
 
     @Override
-    public List<MoodDto> getMoodByMonth(int moodMonth) {
-        List<Mood> month = moodRepository.findByMonth(moodMonth);
-        return month.stream().map(MoodMapper::mapToMoodDto)
+    public List<MoodDto> getMoodByYear(int moodYear) {
+        List<Mood> year = moodRepository.findByYear(moodYear);
+        return year.stream().map(MoodMapper::mapToMoodDto)
                 .collect(Collectors.toList());
     }
-
-
-
-//    @Override
-//    public MoodDto updateMood(long moodId, MoodDto updateMood) {
-//        Mood mood = moodRepository.findById(moodId).orElseThrow(
-//                () -> new ResourceNotFound("Mood does not exists with given id: " + moodId)
-//        );
-//        mood.setYearMonth(updateMood.getYearMonth()),
-//        mood.setYearWeek(updateMood.getYearWeek()),
-//        mood.setYear(updateMood.getYear()),
-//        mood.setQuarter(updateMood.getQuarter()),
-//        mood.setMonth(updateMood.getMonth()),
-//        mood.setWeek(updateMood.getWeek()),
-//        mood.setDay(updateMood.getDay()),
-//        mood.setHour(updateMood.getHour()),
-//        mood.setMinute(updateMood.getMinute()),
-//        mood.setCommand(updateMood.getCommand()),
-//        mood.setMoodLevel(updateMood.getMoodLevel()),
-//
-//         Mood updateMoodObj = moodRepository.save(mood);
-//
-//
-//        return MoodMapper.mapToMoodDto(updateMoodObj);
-//    }
 
     @Override
     public void deleteMood(Long moodId) {

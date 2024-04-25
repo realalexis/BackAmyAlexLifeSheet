@@ -21,9 +21,9 @@ public class MoodController extends BaseController<Mood, Long> {
         this.moodService = moodService;
     }
 
-    @GetMapping("/month/{month}")
-    public ResponseEntity<MoodDto> getMoodByMonth(@PathVariable("month") int month){
-            List<MoodDto> mood = moodService.getMoodByMonth(month);
-            return ResponseEntity.ok((MoodDto) mood);
+    @GetMapping("/year/{year}")
+    public ResponseEntity<List<MoodDto>> getMoodByYear(@PathVariable("year") int year){
+            List<MoodDto> mood = moodService.getMoodByYear(year);
+            return ResponseEntity.ok(mood);
     }
 }

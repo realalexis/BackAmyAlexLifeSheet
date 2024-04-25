@@ -12,8 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class SportDto {
     private Long id;
-    private int yearmonth;
-    private int yearweek;
+    private int year_month;
+    private int year_week;
     private int year;
     private int month;
     private int quarter;
