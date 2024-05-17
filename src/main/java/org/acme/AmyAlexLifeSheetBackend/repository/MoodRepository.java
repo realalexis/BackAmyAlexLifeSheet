@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface MoodRepository extends JpaRepository<Mood, Long> {
     List<Mood> findByYear(int year);
+    List<Mood> findByYearMonth(int yearMonth);
 }

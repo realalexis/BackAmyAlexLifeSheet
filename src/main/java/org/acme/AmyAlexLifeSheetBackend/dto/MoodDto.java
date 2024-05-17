@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+//Security layer, Entity isn't handled directly
 @Getter
 @Setter
 @NoArgsConstructor

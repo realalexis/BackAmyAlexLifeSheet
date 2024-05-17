@@ -11,5 +11,8 @@ public interface MoodService  {
     List<MoodDto>  getMoodAll();
     MoodDto updateMood(long moodId, MoodDto updateMood);
     List<MoodDto> getMoodByYear(int moodYear);
+    List<MoodDto> getMoodByYearMonth(int moodYearMonth);
     void deleteMood(Long moodId);
+
+
 }

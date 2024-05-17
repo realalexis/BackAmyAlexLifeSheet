@@ -50,6 +50,14 @@ public class MoodServiceImpl implements MoodService {
     }
 
     @Override
+    public List<MoodDto> getMoodByYearMonth(int moodYearMonth) {
+        List<Mood> yearMonth = moodRepository.findByYearMonth(moodYearMonth);
+        return yearMonth.stream()
+                .map(MoodMapper::mapToMoodDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public void deleteMood(Long moodId) {
             Mood mood = moodRepository.findById(moodId).orElseThrow(
                     () -> new ResourceNotFound("Mood does not exists with given id: " + moodId)

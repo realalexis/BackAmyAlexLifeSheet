@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "*")
 public abstract class BaseController<Entity, ID> {
     private final JpaRepository<Entity, ID> repository;
 
