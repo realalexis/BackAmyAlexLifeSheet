@@ -43,21 +43,6 @@ public class MoodServiceImpl implements MoodService {
     }
 
     @Override
-    public List<MoodDto> getMoodByYear(int moodYear) {
-        List<Mood> year = moodRepository.findByYear(moodYear);
-        return year.stream().map(MoodMapper::mapToMoodDto)
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public List<MoodDto> getMoodByYearMonth(int moodYearMonth) {
-        List<Mood> yearMonth = moodRepository.findByYearMonth(moodYearMonth);
-        return yearMonth.stream()
-                .map(MoodMapper::mapToMoodDto)
-                .collect(Collectors.toList());
-    }
-
-    @Override
     public void deleteMood(Long moodId) {
             Mood mood = moodRepository.findById(moodId).orElseThrow(
                     () -> new ResourceNotFound("Mood does not exists with given id: " + moodId)
@@ -65,4 +50,29 @@ public class MoodServiceImpl implements MoodService {
 
             moodRepository.deleteById(moodId);
         }
+
+    @Override
+    public List<MoodDto> getMoodsByParams(Integer year, Integer month, Integer week, Integer day) {
+        List<Mood> moods;
+        //Construire la requête en fonction des paramètres fournis
+        if (year != null && month != null && week != null && day != null) {
+            // Si toutes les valeurs sont fournies, recherche par jour
+            moods = moodRepository.findByYearAndMonthAndWeekAndDay(year, month, week, day);
+        } else if (year != null && month != null && week != null) {
+            // Si year, month et week sont fournis, recherche par semaine
+            moods = moodRepository.findByYearAndMonthAndWeek(year, month, week);
+        } else if (year != null && month != null) {
+            // Si year et month sont fournis, recherche par mois
+            moods = moodRepository.findByYearAndMonth(year, month);
+        } else if (year != null) {
+            // Si year est fourni, recherche par année
+            moods = moodRepository.findByYear(year);
+        } else {
+            // Si aucun paramètre n'est fourni, retourner toutes les données (non filtrées)
+            moods = moodRepository.findAll();
+        }
+        return moods.stream()
+                .map(MoodMapper::mapToMoodDto)
+                .collect(Collectors.toList());
     }
+}

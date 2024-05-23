@@ -1,7 +1,6 @@
 package org.acme.AmyAlexLifeSheetBackend.service;
 
 import org.acme.AmyAlexLifeSheetBackend.dto.MoodDto;
-import org.springframework.data.repository.core.CrudMethods;
 
 import java.util.List;
 
@@ -10,9 +9,6 @@ public interface MoodService  {
     MoodDto getMoodById(Long moodId);
     List<MoodDto>  getMoodAll();
     MoodDto updateMood(long moodId, MoodDto updateMood);
-    List<MoodDto> getMoodByYear(int moodYear);
-    List<MoodDto> getMoodByYearMonth(int moodYearMonth);
     void deleteMood(Long moodId);
-
-
+    List<MoodDto> getMoodsByParams(Integer year, Integer month, Integer week, Integer day);
 }
