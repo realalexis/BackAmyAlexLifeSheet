@@ -13,8 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class MoodDto {
     private Long id;
-    private int year_month;
-    private int year_week;
+    private int yearMonth;
+    private int yearWeek;
     private int year;
     private int quarter;
     private int month;

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/mood")
+@RequestMapping("/mood")
 public class MoodController extends BaseController<Mood, Long> {
     private final MoodService moodService;
     public MoodController(MoodRepository repository, MoodService moodService) {
@@ -28,8 +28,8 @@ public class MoodController extends BaseController<Mood, Long> {
     }
 
     @GetMapping("/year_month/{year_month}")
-    public ResponseEntity<List<MoodDto>> getMoodByYearMonth(@PathVariable("year_month") int yearMonth){
-        List<MoodDto> mood = moodService.getMoodByYearMonth(yearMonth);
+    public ResponseEntity<List<MoodDto>> getMoodByYearMonth(@PathVariable("year_month") int moodYearMonth){
+        List<MoodDto> mood = moodService.getMoodByYearMonth(moodYearMonth);
         return ResponseEntity.ok(mood);
     }
 }

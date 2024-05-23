@@ -19,10 +19,10 @@ public class Mood {
     private Long id;
 
     @Column(name = "year_month")
-    private int year_month;
+    private int yearMonth;
 
     @Column(name = "year_week")
-    private int year_week;
+    private int yearWeek;
 
     @Column(name = "year")
     private int year;
