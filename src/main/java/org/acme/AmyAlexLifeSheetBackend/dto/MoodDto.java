@@ -20,5 +20,5 @@ public class MoodDto {
     private int day;
     private int hour;
     private int minute;
-    private int moodLevel;
+    private int data;
 }

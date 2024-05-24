@@ -20,5 +20,5 @@ public class WeightDto {
     private int day;
     private int hour;
     private int minute;
-    private int weight;
+    private int data;
 }

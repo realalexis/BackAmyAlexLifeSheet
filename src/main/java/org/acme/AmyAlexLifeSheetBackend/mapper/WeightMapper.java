@@ -15,7 +15,7 @@ public class WeightMapper {
                 weight.getDay(),
                 weight.getHour(),
                 weight.getMinute(),
-                weight.getWeight()
+                weight.getData()
         );
     }
 
@@ -29,7 +29,7 @@ public class WeightMapper {
                 weightDto.getDay(),
                 weightDto.getHour(),
                 weightDto.getMinute(),
-                weightDto.getWeight()
+                weightDto.getData()
         );
     }
 }

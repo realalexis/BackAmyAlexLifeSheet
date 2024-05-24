@@ -39,6 +39,6 @@ public class DailyMeals {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "mealsEaten")
-    private int mealsEaten;
+    @Column(name = "data")
+    private int data;
 }

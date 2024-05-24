@@ -20,5 +20,5 @@ public class DailyMealsDto {
     private int day;
     private int hour;
     private int minute;
-    private int mealsEaten;
+    private int data;
 }

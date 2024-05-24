@@ -39,6 +39,6 @@ public class Mood {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "moodLevel")
-    private int moodLevel;
+    @Column(name = "data")
+    private int data;
 }

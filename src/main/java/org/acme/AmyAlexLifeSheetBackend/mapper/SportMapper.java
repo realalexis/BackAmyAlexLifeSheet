@@ -15,7 +15,7 @@ public class SportMapper {
                 sport.getDay(),
                 sport.getHour(),
                 sport.getMinute(),
-                sport.getSession()
+                sport.getData()
         );
     }
 
@@ -29,7 +29,7 @@ public class SportMapper {
                 sportDto.getDay(),
                 sportDto.getHour(),
                 sportDto.getMinute(),
-                sportDto.getSession()
+                sportDto.getData()
         );
     }
 }

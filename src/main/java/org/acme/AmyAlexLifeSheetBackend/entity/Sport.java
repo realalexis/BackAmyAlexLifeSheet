@@ -39,6 +39,6 @@ public class Sport {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "session")
-    private String session;
+    @Column(name = "data")
+    private String data;
 }

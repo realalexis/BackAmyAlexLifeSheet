@@ -15,7 +15,7 @@ public class HobbiesMapper {
                 hobbies.getDay(),
                 hobbies.getHour(),
                 hobbies.getMinute(),
-                hobbies.getHobbyType()
+                hobbies.getData()
         );
     }
 
@@ -29,7 +29,7 @@ public class HobbiesMapper {
                 hobbiesDto.getDay(),
                 hobbiesDto.getHour(),
                 hobbiesDto.getMinute(),
-                hobbiesDto.getHobbyType()
+                hobbiesDto.getData()
         );
     }
 }

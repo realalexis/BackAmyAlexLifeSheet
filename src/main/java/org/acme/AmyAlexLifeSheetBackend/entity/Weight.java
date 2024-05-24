@@ -39,6 +39,6 @@ public class Weight {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "weight")
-    private int weight;
+    @Column(name = "data")
+    private int data;
 }

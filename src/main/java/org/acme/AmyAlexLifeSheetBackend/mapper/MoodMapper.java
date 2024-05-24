@@ -15,7 +15,7 @@ public class MoodMapper {
                 mood.getDay(),
                 mood.getHour(),
                 mood.getMinute(),
-                mood.getMoodLevel()
+                mood.getData()
         );
     }
 
@@ -29,7 +29,7 @@ public class MoodMapper {
                 moodDto.getDay(),
                 moodDto.getHour(),
                 moodDto.getMinute(),
-                moodDto.getMoodLevel()
+                moodDto.getData()
         );
     }
 }

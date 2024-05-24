@@ -20,5 +20,5 @@ public class HobbiesDto {
     private int day;
     private int hour;
     private int minute;
-    private String hobbyType;
+    private String data;
 }

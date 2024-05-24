@@ -20,5 +20,5 @@ public class SportDto {
     private int day;
     private int hour;
     private int minute;
-    private String session;
+    private String data;
 }

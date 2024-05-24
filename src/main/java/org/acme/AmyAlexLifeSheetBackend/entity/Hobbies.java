@@ -39,6 +39,6 @@ public class Hobbies {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "hobbyType")
-    private String hobbyType;
+    @Column(name = "data")
+    private String data;
 }

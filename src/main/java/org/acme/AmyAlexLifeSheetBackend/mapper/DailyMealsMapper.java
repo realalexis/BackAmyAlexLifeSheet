@@ -15,7 +15,7 @@ public class DailyMealsMapper {
                 dailyMeals.getDay(),
                 dailyMeals.getHour(),
                 dailyMeals.getMinute(),
-                dailyMeals.getMealsEaten()
+                dailyMeals.getData()
         );
     }
 
@@ -29,7 +29,7 @@ public class DailyMealsMapper {
                 dailyMealsDto.getDay(),
                 dailyMealsDto.getHour(),
                 dailyMealsDto.getMinute(),
-                dailyMealsDto.getMealsEaten()
+                dailyMealsDto.getData()
         );
     }
 }
