@@ -12,8 +12,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Mood")
-public class Mood {
+@Table(name = "Hobbies")
+public class Hobbies {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -39,6 +39,6 @@ public class Mood {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "moodLevel")
-    private int moodLevel;
+    @Column(name = "hobbyType")
+    private String hobbyType;
 }

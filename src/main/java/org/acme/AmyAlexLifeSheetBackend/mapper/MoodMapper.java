@@ -8,8 +8,6 @@ public class MoodMapper {
     public static MoodDto mapToMoodDto(Mood mood){
         return new MoodDto(
                 mood.getId(),
-                mood.getYearMonth(),
-                mood.getYearWeek(),
                 mood.getYear(),
                 mood.getQuarter(),
                 mood.getMonth(),
@@ -17,7 +15,6 @@ public class MoodMapper {
                 mood.getDay(),
                 mood.getHour(),
                 mood.getMinute(),
-                mood.getCommand(),
                 mood.getMoodLevel()
         );
     }
@@ -25,8 +22,6 @@ public class MoodMapper {
     public static Mood mapToMood(MoodDto moodDto){
         return new Mood(
                 moodDto.getId(),
-                moodDto.getYearMonth(),
-                moodDto.getYearWeek(),
                 moodDto.getYear(),
                 moodDto.getQuarter(),
                 moodDto.getMonth(),
@@ -34,7 +29,6 @@ public class MoodMapper {
                 moodDto.getDay(),
                 moodDto.getHour(),
                 moodDto.getMinute(),
-                moodDto.getCommand(),
                 moodDto.getMoodLevel()
         );
     }

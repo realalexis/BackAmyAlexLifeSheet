@@ -18,12 +18,6 @@ public class Sport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "year_month")
-    private int yearMonth;
-
-    @Column(name = "year_week")
-    private int yearWeek;
-
     @Column(name = "year")
     private int year;
 
@@ -45,8 +39,6 @@ public class Sport {
     @Column(name = "minute")
     private int minute;
 
-    @Column(name = "command")
-    private String command;
-    @Column(name = "reason")
-    private String reason;
+    @Column(name = "session")
+    private String session;
 }

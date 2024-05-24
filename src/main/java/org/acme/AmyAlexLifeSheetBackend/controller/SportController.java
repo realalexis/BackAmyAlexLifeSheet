@@ -27,7 +27,7 @@ public class SportController extends BaseController<Sport, Long> {
             @RequestParam(required = false) Integer week,
             @RequestParam(required = false) Integer day
     ) {
-        List<SportDto> sports = sportService.getSportsByParams(year, month, week, day);
+        List<SportDto> sports = sportService.getSportByParams(year, month, week, day);
         return ResponseEntity.ok(sports);
     }
 

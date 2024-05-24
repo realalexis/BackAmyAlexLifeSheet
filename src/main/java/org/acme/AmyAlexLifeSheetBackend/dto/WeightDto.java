@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class SportDto {
+public class WeightDto {
     private Long id;
     private int year;
     private int quarter;
@@ -20,5 +20,5 @@ public class SportDto {
     private int day;
     private int hour;
     private int minute;
-    private String session;
+    private int weight;
 }

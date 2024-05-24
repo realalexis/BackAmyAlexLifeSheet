@@ -17,41 +17,6 @@ import java.util.stream.Collectors;
 public class MoodServiceImpl implements MoodService {
     private MoodRepository moodRepository;
     @Override
-    public MoodDto createMood(MoodDto moodDto) {
-        Mood mood = MoodMapper.mapToMood(moodDto);
-        Mood savedMood = moodRepository.save(mood);
-        return MoodMapper.mapToMoodDto(savedMood);
-    }
-
-    @Override
-    public MoodDto getMoodById(Long moodId) {
-        Mood mood = moodRepository.findById(moodId)
-                .orElseThrow(() -> new ResourceNotFound("Mood does not exist with given id : " + moodId));
-        return MoodMapper.mapToMoodDto(mood);
-    }
-
-    @Override
-    public List<MoodDto> getMoodAll() {
-        List<Mood> mood =  moodRepository.findAll();
-        return mood.stream().map(MoodMapper::mapToMoodDto)
-                .collect(Collectors.toList());
-    }
-
-    @Override
-    public MoodDto updateMood(long moodId, MoodDto updateMood) {
-        return null;
-    }
-
-    @Override
-    public void deleteMood(Long moodId) {
-            Mood mood = moodRepository.findById(moodId).orElseThrow(
-                    () -> new ResourceNotFound("Mood does not exists with given id: " + moodId)
-            );
-
-            moodRepository.deleteById(moodId);
-        }
-
-    @Override
     public List<MoodDto> getMoodsByParams(Integer year, Integer month, Integer week, Integer day) {
         List<Mood> moods;
         //Construire la requête en fonction des paramètres fournis
